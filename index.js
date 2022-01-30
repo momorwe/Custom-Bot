@@ -71,4 +71,4 @@ client.on("messageCreate", async message => {
 
 // Login To Discord with your app's Token
 
-client.login(config.token);
+client.login("OTM3MzgyNTA5ODgzMzIyNDAw.Yfa7fg.M0GE_47sXTfCa-3b_wxaAoOw-Ds");
