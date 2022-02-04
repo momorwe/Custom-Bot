@@ -18,6 +18,14 @@ const fs = require('fs');
 client.commands = new Discord.Collection();
 
 // Commands Handler 
+client.on("ready", async () => {
+    function randomStatus() {
+    let status = ["Probot", "Transfer", "Credits", "PrTrCr"]
+    let rstatus = Math.floor(Math.random() * status.length);
+
+    client.user.setActivity(status[rstatus], {type: "PLAYING"});
+    }; setInterval(randomStatus, 5000)
+})
 
 // get into the cmds folder
 fs.readdirSync('./commands/').forEach(dir => {
@@ -71,4 +79,6 @@ client.on("messageCreate", async message => {
 
 // Login To Discord with your app's Token
 
-client.login("OTM3MzgyNTA5ODgzMzIyNDAw.Yfa7fg.M0GE_47sXTfCa-3b_wxaAoOw-Ds");
+
+
+client.login("OTM2NDAzNTU4MTU1MzA1MDEy.YfMrxQ.1IwgmlZ9u5NEAWSt7-AuUy-GyPA");

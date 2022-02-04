@@ -6,7 +6,7 @@ module.exports.run = async (Client, message, args, prefix) => {
     if(!message.content.startsWith(prefix)) return;
     await message.channel.send('Starting...')
 
-    for(let i = 5; i <= 30; i++) {
+    for(let i = 1; i <= 30; i++) {
     await new Promise(r=>setTimeout(r,5000))
     message.channel.send(`Working on account number **${i}** Now!`)
     await new Promise(r=>setTimeout(r,1000))
@@ -49,9 +49,8 @@ module.exports.run = async (Client, message, args, prefix) => {
     message.channel.send(`!s${i} ${cap}`)
 }
 }
-}
-    
+}  
 
 module.exports.help = {
-    name: "start"
+    name: "start2"
 }
